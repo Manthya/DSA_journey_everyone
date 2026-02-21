@@ -1,20 +1,8 @@
-<!-- DASHBOARD START -->
-# 🧠 DSA Architect Dashboard
+# 🧠 DSA Architect Plan
 
-🔥 Current Week: 1
-📅 Streak: 1 days
+Welcome to your complete DSA mastery plan. Track your progress, level up, and maintain your streak over at your dedicated command center!
 
-Bucket Progress:
-🟢 Linear: [░░░░░░░░░░] 0 / 86 (0%)
-🔵 Structural: [░░░░░░░░░░] 0 / 88 (0%)
-🟣 Graphs: [░░░░░░░░░░] 0 / 98 (0%)
-🔴 Optimization: [░░░░░░░░░░] 0 / 126 (0%)
-
-🏢 FAANG Problems Solved: [░░░░░░░░░░] 0 / 111 (0%)
-
-Weakest Area: -
-Strongest Area: -
-<!-- DASHBOARD END -->
+👉 **[View My Daily Dashboard & Progress (DASHBOARD.md)](./DASHBOARD.md)** 👈
 
 ---
 

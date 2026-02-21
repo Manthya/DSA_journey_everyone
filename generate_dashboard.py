@@ -1,6 +1,7 @@
 import os
 import re
 from datetime import datetime
+import random
 
 # Configuration
 DIRECTORIES = {
@@ -11,7 +12,18 @@ DIRECTORIES = {
     "FAANG": "faang-practice/README.md"
 }
 
-ROOT_README = "README.md"
+DASHBOARD_FILE = "DASHBOARD.md"
+
+QUOTES = [
+    "The only way to learn a new programming language is by writing programs in it. – Dennis Ritchie",
+    "Experience is the name everyone gives to their mistakes. – Oscar Wilde",
+    "In order to be irreplaceable, one must always be different. – Coco Chanel",
+    "First, solve the problem. Then, write the code. – John Johnson",
+    "Make it work, make it right, make it fast. – Kent Beck",
+    "Talk is cheap. Show me the code. – Linus Torvalds",
+    "Continuous effort - not strength or intelligence - is the key to unlocking our potential. – Liane Cardes",
+    "Do not pray for an easy life, pray for the strength to endure a difficult one. – Bruce Lee"
+]
 
 def count_progress(filepath):
     total = 0
@@ -28,7 +40,7 @@ def count_progress(filepath):
                 total += 1
     return total, completed
 
-def generate_progress_bar(completed, total, length=10):
+def generate_progress_bar(completed, total, length=20):
     if total == 0:
         return "░" * length
     filled_length = int(length * completed // total)
@@ -36,10 +48,6 @@ def generate_progress_bar(completed, total, length=10):
     return bar
 
 def get_streak():
-    """
-    Very basic streak calculation: Check if any of the READMEs were modified today.
-    A more advanced version would parse git logs or a specific streak tracker file.
-    """
     today = datetime.now().date()
     modified_today = False
     
@@ -50,8 +58,6 @@ def get_streak():
                 modified_today = True
                 break
     
-    # We will just return 1 if modified today, 0 if not. 
-    # To track long streaks without a server, we would need to store the streak in a hidden file.
     streak_file = ".streak_data"
     current_streak = 0
     last_mod_date = None
@@ -75,7 +81,6 @@ def get_streak():
         with open(streak_file, 'w') as f:
             f.write(f"{current_streak},{today.strftime('%Y-%m-%d')}")
     else:
-        # If it's been more than 1 day since last modification, reset streak
         if last_mod_date and (today - last_mod_date).days > 1:
             current_streak = 0
             with open(streak_file, 'w') as f:
@@ -83,15 +88,37 @@ def get_streak():
 
     return current_streak
 
+def get_level_info(completed):
+    levels = [
+        (0, "Initiate 🥚", 50),
+        (50, "Apprentice 🐣", 150),
+        (150, "Explorer 🐥", 250),
+        (250, "Warrior 🦅", 350),
+        (350, "Master 🐉", 450),
+        (450, "Grandmaster 🌌", 500),
+        (500, "Architect 👑", 9999)
+    ]
+    for i in range(len(levels)-1, -1, -1):
+        if completed >= levels[i][0]:
+            next_tier = levels[i][2]
+            return levels[i][1], next_tier
+    return "Initiate 🥚", 50
+
 def update_readme():
     stats = {}
+    total_all = 0
+    completed_all = 0
+    
     for name, filepath in DIRECTORIES.items():
         total, completed = count_progress(filepath)
         stats[name] = {"total": total, "completed": completed}
+        total_all += total
+        completed_all += completed
 
     streak = get_streak()
+    level_name, next_tier = get_level_info(completed_all)
+    quote = random.choice(QUOTES)
     
-    # Determine Strongest/Weakest Areas
     core_buckets = ["Linear", "Structural", "Graphs", "Optimization"]
     percentages = {}
     for b in core_buckets:
@@ -100,7 +127,6 @@ def update_readme():
         else:
             percentages[b] = 0
             
-    # filter out 0% for weakest if nothing started, but if all 0, it's just none
     started_buckets = {k: v for k, v in percentages.items() if stats[k]["completed"] > 0}
     
     if started_buckets:
@@ -110,49 +136,64 @@ def update_readme():
         strongest = "-"
         weakest = "-"
 
-    # Build Dashboard Markdown
+    total_pct = int((completed_all / total_all) * 100) if total_all > 0 else 0
+    total_bar = generate_progress_bar(completed_all, total_all, 20)
+    
     dashboard = "<!-- DASHBOARD START -->\n"
-    dashboard += "# 🧠 DSA Architect Dashboard\n\n"
-    dashboard += "🔥 Current Week: 1\n"
-    dashboard += f"📅 Streak: {streak} days\n\n"
-    dashboard += "Bucket Progress:\n"
+    dashboard += f"🔥 **Current Streak:** {streak} days\n"
+    dashboard += f"💎 **Current Level:** {level_name}\n"
+    dashboard += f"🌟 **Total Progress:** [{total_bar}] {completed_all} / {total_all} ({total_pct}%)\n"
+    if next_tier < 9000:
+        dashboard += f"📈 **Next Rank At:** {next_tier} problems ({next_tier - completed_all} to go!)\n\n"
+    else:
+        dashboard += f"📈 **Rank:** MAX LEVEL ACHIEVED\n\n"
+        
+    dashboard += "---\n\n"
+    dashboard += "### 🪣 Bucket Progress:\n"
     
     for bucket in core_buckets:
         t = stats[bucket]["total"]
         c = stats[bucket]["completed"]
         pct = int((c / t) * 100) if t > 0 else 0
-        bar = generate_progress_bar(c, t)
-        
+        bar = generate_progress_bar(c, t, 20)
         icon = "🟢" if bucket == "Linear" else "🔵" if bucket == "Structural" else "🟣" if bucket == "Graphs" else "🔴"
-        dashboard += f"{icon} {bucket}: [{bar}] {c} / {t} ({pct}%)\n"
+        
+        # formatting string length to align progress bars
+        padded_bucket = f"**{bucket}:**".ljust(18)
+        dashboard += f"{icon} {padded_bucket} [{bar}] {c} / {t} ({pct}%)\n"
 
     dashboard += "\n"
     t = stats["FAANG"]["total"]
     c = stats["FAANG"]["completed"]
     pct = int((c / t) * 100) if t > 0 else 0
-    bar = generate_progress_bar(c, t)
-    dashboard += f"🏢 FAANG Problems Solved: [{bar}] {c} / {t} ({pct}%)\n\n"
+    bar = generate_progress_bar(c, t, 20)
+    padded_bucket_faang = "**FAANG Practice:**".ljust(18)
+    dashboard += f"🏢 {padded_bucket_faang} [{bar}] {c} / {t} ({pct}%)\n\n"
+    dashboard += "---\n\n"
     
-    dashboard += f"Weakest Area: {weakest}\n"
-    dashboard += f"Strongest Area: {strongest}\n"
+    dashboard += f"💡 **Strongest Area:** {strongest}\n"
+    dashboard += f"🚧 **Needs Focus:** {weakest}\n\n"
+    
+    dashboard += f"> *\"{quote}\"*\n"
     dashboard += "<!-- DASHBOARD END -->"
 
-    # Read the existing README and replace the placeholder block
-    with open(ROOT_README, 'r') as f:
-        content = f.read()
+    if os.path.exists(DASHBOARD_FILE):
+        with open(DASHBOARD_FILE, 'r') as f:
+            content = f.read()
 
-    new_content = re.sub(
-        r'<!-- DASHBOARD START -->.*?<!-- DASHBOARD END -->', 
-        dashboard, 
-        content, 
-        flags=re.DOTALL
-    )
+        new_content = re.sub(
+            r'<!-- DASHBOARD START -->.*?<!-- DASHBOARD END -->', 
+            dashboard, 
+            content, 
+            flags=re.DOTALL
+        )
 
-    with open(ROOT_README, 'w') as f:
-        f.write(new_content)
-    
-    print("Dashboard stats generated successfully!")
-    print(dashboard)
+        with open(DASHBOARD_FILE, 'w') as f:
+            f.write(new_content)
+        
+        print(f"Dashboard stats generated successfully in {DASHBOARD_FILE}!")
+    else:
+        print(f"Could not find {DASHBOARD_FILE}.")
 
 if __name__ == "__main__":
     update_readme()
