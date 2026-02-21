@@ -3,10 +3,11 @@
 Welcome to your central command. Consistency is the only path to mastery. Keep pushing, keep solving, and level up!
 
 <!-- DASHBOARD START -->
-🔥 **Current Streak:** 1 days
-💎 **Current Level:** Initiate 🥚
-🌟 **Total Progress:** `░░░░░░░░░░░░░░░░░░░░` 0 / 509 (0%)
-📈 **Next Rank At:** 50 problems (50 to go!)
+### 🏆 Player Stats
+
+| 💎 Level | 🔥 Streak | 🌟 Total XP | 📈 Next Title |
+| :---: | :---: | :--- | :--- |
+| **Initiate 🥚** | **1 days** | `░░░░░░░░░░░░░░░░░░░░` **0 / 509 (0%)** | 50 Solved (50 to go!) |
 
 ---
 
@@ -25,5 +26,5 @@ Welcome to your central command. Consistency is the only path to mastery. Keep p
 💡 **Strongest Area:** -
 🚧 **Needs Focus:** -
 
-> *"Do not pray for an easy life, pray for the strength to endure a difficult one. – Bruce Lee"*
+> *"Talk is cheap. Show me the code. – Linus Torvalds"*
 <!-- DASHBOARD END -->

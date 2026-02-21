@@ -140,13 +140,17 @@ def update_readme():
     total_bar = generate_progress_bar(completed_all, total_all, 20)
     
     dashboard = "<!-- DASHBOARD START -->\n"
-    dashboard += f"🔥 **Current Streak:** {streak} days\n"
-    dashboard += f"💎 **Current Level:** {level_name}\n"
-    dashboard += f"🌟 **Total Progress:** `{total_bar}` {completed_all} / {total_all} ({total_pct}%)\n"
+    
+    dashboard += "### 🏆 Player Stats\n\n"
+    dashboard += "| 💎 Level | 🔥 Streak | 🌟 Total XP | 📈 Next Title |\n"
+    dashboard += "| :---: | :---: | :--- | :--- |\n"
+    
     if next_tier < 9000:
-        dashboard += f"📈 **Next Rank At:** {next_tier} problems ({next_tier - completed_all} to go!)\n\n"
+        next_rank_str = f"{next_tier} Solved ({next_tier - completed_all} to go!)"
     else:
-        dashboard += f"📈 **Rank:** MAX LEVEL ACHIEVED\n\n"
+        next_rank_str = "MAX LEVEL ACHIEVED"
+        
+    dashboard += f"| **{level_name}** | **{streak} days** | `{total_bar}` **{completed_all} / {total_all} ({total_pct}%)** | {next_rank_str} |\n\n"
         
     dashboard += "---\n\n"
     dashboard += "### 🪣 Bucket Progress\n\n"
