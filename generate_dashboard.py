@@ -142,14 +142,16 @@ def update_readme():
     dashboard = "<!-- DASHBOARD START -->\n"
     dashboard += f"🔥 **Current Streak:** {streak} days\n"
     dashboard += f"💎 **Current Level:** {level_name}\n"
-    dashboard += f"🌟 **Total Progress:** [{total_bar}] {completed_all} / {total_all} ({total_pct}%)\n"
+    dashboard += f"🌟 **Total Progress:** `{total_bar}` {completed_all} / {total_all} ({total_pct}%)\n"
     if next_tier < 9000:
         dashboard += f"📈 **Next Rank At:** {next_tier} problems ({next_tier - completed_all} to go!)\n\n"
     else:
         dashboard += f"📈 **Rank:** MAX LEVEL ACHIEVED\n\n"
         
     dashboard += "---\n\n"
-    dashboard += "### 🪣 Bucket Progress:\n"
+    dashboard += "### 🪣 Bucket Progress\n\n"
+    dashboard += "| 🗂️ Category | Progress | Solved | % |\n"
+    dashboard += "| :--- | :--- | :---: | :---: |\n"
     
     for bucket in core_buckets:
         t = stats[bucket]["total"]
@@ -158,17 +160,14 @@ def update_readme():
         bar = generate_progress_bar(c, t, 20)
         icon = "🟢" if bucket == "Linear" else "🔵" if bucket == "Structural" else "🟣" if bucket == "Graphs" else "🔴"
         
-        # formatting string length to align progress bars
-        padded_bucket = f"**{bucket}:**".ljust(18)
-        dashboard += f"{icon} {padded_bucket} [{bar}] {c} / {t} ({pct}%)\n"
+        dashboard += f"| {icon} **{bucket}** | `{bar}` | {c} / {t} | **{pct}%** |\n"
 
-    dashboard += "\n"
     t = stats["FAANG"]["total"]
     c = stats["FAANG"]["completed"]
     pct = int((c / t) * 100) if t > 0 else 0
     bar = generate_progress_bar(c, t, 20)
-    padded_bucket_faang = "**FAANG Practice:**".ljust(18)
-    dashboard += f"🏢 {padded_bucket_faang} [{bar}] {c} / {t} ({pct}%)\n\n"
+    
+    dashboard += f"| 🏢 **FAANG Practice** | `{bar}` | {c} / {t} | **{pct}%** |\n\n"
     dashboard += "---\n\n"
     
     dashboard += f"💡 **Strongest Area:** {strongest}\n"
