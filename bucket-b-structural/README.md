@@ -2,44 +2,132 @@
 
 This bucket focuses on foundational data structures that dictate how data is stored, retrieved, and searched. Mastery of these patterns is essential for unlocking deeper algorithmic concepts.
 
-## 🔸 Stack
-- [ ] **Valid Parentheses** (Easy) - *Must Solve*
-- [ ] **Min Stack** (Medium) - *Must Solve*
-- [ ] **Evaluate Reverse Polish Notation** (Medium) - *Must Solve*
-- [ ] **Generate Parentheses** (Medium) - *Must Solve*
-- [ ] **Daily Temperatures** (Medium) - *Must Solve*
-- [ ] **Car Fleet** (Medium)
-- [ ] **Largest Rectangle in Histogram** (Hard) - *Must Solve*
-- [ ] **Simplify Path** (Medium)
-- [ ] **Basic Calculator II** (Medium)
+Problems are divided into **Must Solve** (core patterns every candidate should know) and **Good to Know** (advanced applications, edge cases, and frequency boosters).
 
-## 🔸 Queue
-- [ ] **Implement Queue using Stacks** (Easy) - *Must Solve*
+---
+
+## 🔸 Stack
+
+**Must Solve:**
+- [ ] **Valid Parentheses** (Easy)
+- [ ] **Min Stack** (Medium)
+- [ ] **Evaluate Reverse Polish Notation** (Medium)
+- [ ] **Generate Parentheses** (Medium) *(also Backtracking)*
+- [ ] **Simplify Path** (Medium)
+- [ ] **Daily Temperatures** (Medium) *(Intro to Monotonic)*
+
+**Good to Know (More Practice):**
+- [ ] **Basic Calculator II** (Medium)
+- [ ] **Basic Calculator** (Hard)
+- [ ] **Decode String** (Medium)
+- [ ] **Remove All Adjacent Duplicates In String** (Easy)
+- [ ] **Remove All Adjacent Duplicates in String II** (Medium)
+- [ ] **Asteroid Collision** (Medium)
+- [ ] **Score of Parentheses** (Medium)
+- [ ] **Exclusive Time of Functions** (Medium)
+- [ ] **Minimum Remove to Make Valid Parentheses** (Medium)
+- [ ] **Make The String Great** (Easy)
+- [ ] **Baseball Game** (Easy)
+- [ ] **Crawler Log Folder** (Easy)
+
+---
+
+## 🔸 Monotonic Stack (Crucial for Harder Problems)
+
+**Must Solve:**
+- [ ] **Daily Temperatures** (Medium)
+- [ ] **Car Fleet** (Medium)
+- [ ] **Largest Rectangle in Histogram** (Hard)
+
+**Good to Know (More Practice):**
+- [ ] **Next Greater Element I** (Easy)
+- [ ] **Next Greater Element II** (Medium)
+- [ ] **Sum of Subarray Minimums** (Medium)
+- [ ] **Maximal Rectangle** (Hard)
+- [ ] **Online Stock Span** (Medium)
+- [ ] **Remove K Digits** (Medium)
+- [ ] **132 Pattern** (Medium)
+- [ ] **Maximum Frequency Stack** (Hard)
+- [ ] **Steps to Make Array Non-decreasing** (Medium)
+
+---
+
+## 🔸 Queue & Deque
+
+**Must Solve:**
+- [ ] **Implement Queue using Stacks** (Easy)
+- [ ] **Design Circular Queue** (Medium)
+
+**Good to Know (More Practice):**
 - [ ] **Implement Stack using Queues** (Easy)
-- [ ] **Design Circular Queue** (Medium) - *Must Solve*
+- [ ] **Design Front Middle Back Queue** (Medium)
 - [ ] **Design Hit Counter** (Medium)
 - [ ] **Moving Average from Data Stream** (Easy)
+- [ ] **Sliding Window Maximum** (Hard) *(Deque application)*
+- [ ] **Shortest Subarray with Sum at Least K** (Hard) *(Monotonic Deque)*
+- [ ] **Dota2 Senate** (Medium)
+- [ ] **Reveal Cards In Increasing Order** (Medium)
+- [ ] **Time Needed to Buy Tickets** (Easy)
+- [ ] **Number of Students Unable to Eat Lunch** (Easy)
+
+---
 
 ## 🔸 Linked List
-- [ ] **Reverse Linked List** (Easy) - *Must Solve*
-- [ ] **Merge Two Sorted Lists** (Easy) - *Must Solve*
-- [ ] **Reorder List** (Medium) - *Must Solve*
-- [ ] **Remove Nth Node From End of List** (Medium) - *Must Solve*
-- [ ] **Copy List with Random Pointer** (Medium) - *Must Solve*
+
+**Must Solve:**
+- [ ] **Reverse Linked List** (Easy)
+- [ ] **Merge Two Sorted Lists** (Easy)
+- [ ] **Linked List Cycle** (Easy)
+- [ ] **Reorder List** (Medium)
+- [ ] **Remove Nth Node From End of List** (Medium)
+- [ ] **Copy List with Random Pointer** (Medium)
 - [ ] **Add Two Numbers** (Medium)
-- [ ] **Linked List Cycle** (Easy) - *Must Solve*
-- [ ] **Find the Duplicate Number** (Medium) - *Must Solve*
-- [ ] **LRU Cache** (Medium) - *Must Solve*
-- [ ] **Merge k Sorted Lists** (Hard) - *Must Solve*
+- [ ] **Find the Duplicate Number** (Medium) *(Floyd's algorithm application)*
+- [ ] **LRU Cache** (Medium) *(Linked List + HashMap)*
+- [ ] **Intersection of Two Linked Lists** (Easy)
+
+**Good to Know (More Practice):**
+- [ ] **Merge k Sorted Lists** (Hard)
 - [ ] **Reverse Nodes in k-Group** (Hard)
+- [ ] **Palindrome Linked List** (Easy)
+- [ ] **Sort List** (Medium)
+- [ ] **Swapping Nodes in a Linked List** (Medium)
+- [ ] **Partition List** (Medium)
+- [ ] **Remove Duplicates from Sorted List** (Easy)
+- [ ] **Remove Duplicates from Sorted List II** (Medium)
+- [ ] **LFU Cache** (Hard)
+- [ ] **Design Linked List** (Medium)
+- [ ] **Insertion Sort List** (Medium)
+- [ ] **Rotate List** (Medium)
+- [ ] **Reverse Linked List II** (Medium)
+- [ ] **Delete Node in a Linked List** (Medium)
+- [ ] **Middle of the Linked List** (Easy)
+
+---
 
 ## 🔸 Binary Search
-- [ ] **Binary Search** (Easy) - *Must Solve*
-- [ ] **Search a 2D Matrix** (Medium) - *Must Solve*
-- [ ] **Koko Eating Bananas** (Medium) - *Must Solve*
-- [ ] **Find Minimum in Rotated Sorted Array** (Medium) - *Must Solve*
-- [ ] **Search in Rotated Sorted Array** (Medium) - *Must Solve*
-- [ ] **Time Based Key-Value Store** (Medium) - *Must Solve*
-- [ ] **Median of Two Sorted Arrays** (Hard) - *Must Solve*
+
+**Must Solve:**
+- [ ] **Binary Search** (Easy)
+- [ ] **Search a 2D Matrix** (Medium)
+- [ ] **Find Minimum in Rotated Sorted Array** (Medium)
+- [ ] **Search in Rotated Sorted Array** (Medium)
+- [ ] **Koko Eating Bananas** (Medium)
+- [ ] **Time Based Key-Value Store** (Medium)
+- [ ] **Median of Two Sorted Arrays** (Hard)
+- [ ] **First Bad Version** (Easy)
+
+**Good to Know (More Practice):**
 - [ ] **Find Peak Element** (Medium)
+- [ ] **Valid Perfect Square** (Easy)
+- [ ] **Find First and Last Position of Element in Sorted Array** (Medium)
 - [ ] **Split Array Largest Sum** (Hard)
+- [ ] **Capacity To Ship Packages Within D Days** (Medium)
+- [ ] **Minimum Number of Days to Make m Bouquets** (Medium)
+- [ ] **Find Minimum in Rotated Sorted Array II** (Heavy Duplicates) (Hard)
+- [ ] **Search in Rotated Sorted Array II** (Medium)
+- [ ] **Magnetic Force Between Two Balls** (Medium)
+- [ ] **Find K Closest Elements** (Medium)
+- [ ] **Arranging Coins** (Easy)
+- [ ] **Sqrt(x)** (Easy)
+- [ ] **Search Insert Position** (Easy)

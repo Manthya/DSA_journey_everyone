@@ -1,18 +1,20 @@
+<!-- DASHBOARD START -->
 # 🧠 DSA Architect Dashboard
 
 🔥 Current Week: 1
-📅 Streak: 0 days
+📅 Streak: 1 days
 
 Bucket Progress:
-🟢 Linear: 0
-🔵 Structural: 0
-🟣 Graphs: 0
-🔴 Optimization: 0
+🟢 Linear: [░░░░░░░░░░] 0 / 86 (0%)
+🔵 Structural: [░░░░░░░░░░] 0 / 88 (0%)
+🟣 Graphs: [░░░░░░░░░░] 0 / 98 (0%)
+🔴 Optimization: [░░░░░░░░░░] 0 / 126 (0%)
 
-🏢 FAANG Problems Solved: 0
+🏢 FAANG Problems Solved: [░░░░░░░░░░] 0 / 111 (0%)
 
 Weakest Area: -
 Strongest Area: -
+<!-- DASHBOARD END -->
 
 ---
 
@@ -35,26 +37,38 @@ Strongest Area: -
 # 🪣 Buckets Definition
 
 ## 🟢 Bucket A – Linear
-* Arrays
+* Arrays & Hashing
 * Two Pointers
 * Sliding Window
 * Prefix Sum
+* Matrix (2D Arrays)
+* String Manipulation
 
 ## 🔵 Bucket B – Structural
 * Stack
-* Queue
+* Monotonic Stack
+* Queue & Deque
 * Linked List
 * Binary Search
 
 ## 🟣 Bucket C – Trees & Graphs
-* DFS / BFS
+* Trees (DFS / BFS)
+* Tries (Prefix Trees)
+* Graphs (DFS / BFS)
+* Advanced Graphs (Shortest Path, MST, Bridges)
 * Union Find
 * Topological Sort
+* Advanced Trees (Segment Tree / BIT)
 
 ## 🔴 Bucket D – Optimization
-* DP
+* 1D Dynamic Programming
+* 2D Dynamic Programming
+* Advanced Dynamic Programming
 * Greedy
 * Backtracking
+* Intervals (Overlaps & Sorting)
+* Bit Manipulation
+* Math & Geometry
 
 ---
 
