@@ -72,6 +72,28 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 
 ---
 
+## 🔸 Heap / Priority Queue
+
+**Must Solve:**
+- [ ] **Kth Largest Element in an Array** (Medium)
+- [ ] **K Closest Points to Origin** (Medium)
+- [ ] **Find Median from Data Stream** (Hard)
+- [ ] **Task Scheduler** (Medium) *(Also in Greedy)*
+- [ ] **Meeting Rooms II** (Medium) *(Also in Intervals)*
+- [ ] **Top K Frequent Elements** (Medium) *(Also in Arrays)*
+
+**Good to Know (More Practice):**
+- [ ] **Top K Frequent Words** (Medium)
+- [ ] **Reorganize String** (Medium)
+- [ ] **Ugly Number II** (Medium)
+- [ ] **Find K Pairs with Smallest Sums** (Medium)
+- [ ] **Kth Smallest Element in a Sorted Matrix** (Medium)
+- [ ] **IPO** (Hard)
+- [ ] **Maximum Performance of a Team** (Hard)
+- [ ] **Smallest Range Covering Elements from K Lists** (Hard)
+
+---
+
 ## 🔸 Linked List
 
 **Must Solve:**
@@ -102,6 +124,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Reverse Linked List II** (Medium)
 - [ ] **Delete Node in a Linked List** (Medium)
 - [ ] **Middle of the Linked List** (Easy)
+- [ ] **Odd Even Linked List** (Medium)
 
 ---
 

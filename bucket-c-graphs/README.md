@@ -24,6 +24,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Symmetric Tree** (Easy)
 - [ ] **Path Sum** (Easy)
 - [ ] **Subtree of Another Tree** (Easy)
+- [ ] **Vertical Order Traversal of a Binary Tree** (Hard)
 
 **Good to Know (More Practice):**
 - [ ] **Count Good Nodes in Binary Tree** (Medium)
@@ -44,6 +45,8 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Insert into a Binary Search Tree** (Medium)
 - [ ] **Search in a Binary Search Tree** (Easy)
 - [ ] **Two Sum IV - Input is a BST** (Easy)
+- [ ] **Recover Binary Search Tree** (Medium)
+- [ ] **Binary Tree Cameras** (Hard)
 
 ---
 
@@ -69,6 +72,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 
 **Must Solve:**
 - [ ] **Number of Islands** (Medium)
+- [ ] **Flood Fill** (Easy)
 - [ ] **Max Area of Island** (Medium)
 - [ ] **Clone Graph** (Medium)
 - [ ] **Rotting Oranges** (Medium) *(Multi-Source BFS)*
@@ -81,7 +85,10 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Find the Town Judge** (Easy)
 
 **Good to Know (More Practice):**
-- [ ] **Walls and Gates / 01 Matrix** (Medium)
+- [ ] **Walls and Gates** (Medium)
+- [ ] **01 Matrix** (Medium)
+- [ ] **Number of Enclaves** (Medium)
+- [ ] **Minimum Genetic Mutation** (Medium)
 - [ ] **Graph Valid Tree** (Medium)
 - [ ] **Is Graph Bipartite?** (Medium)
 - [ ] **Shortest Path in Binary Matrix** (Medium)

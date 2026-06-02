@@ -33,6 +33,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Insert Delete GetRandom O(1)** (Medium)
 - [ ] **Design HashMap / Design HashSet** (Easy)
 - [ ] **Brick Wall** (Medium)
+- [ ] **Ransom Note** (Easy)
 
 ---
 
@@ -49,6 +50,8 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 
 **Good to Know (More Practice):**
 - [ ] **Move Zeroes** (Easy)
+- [ ] **3Sum Closest** (Medium)
+- [ ] **Remove Element** (Easy)
 - [ ] **4Sum** (Medium)
 - [ ] **Sort Array By Parity** (Easy)
 - [ ] **Reverse Vowels of a String** (Easy)
@@ -137,3 +140,5 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Determine if String Halves Are Alike** (Easy)
 - [ ] **Find and Replace Pattern** (Medium)
 - [ ] **Minimum Penalty for a Shop** (Medium)
+- [ ] **Count and Say** (Medium)
+- [ ] **String Compression** (Medium)

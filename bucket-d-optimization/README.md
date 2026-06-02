@@ -143,6 +143,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Data Stream as Disjoint Intervals** (Hard)
 - [ ] **Interval List Intersections** (Medium)
 - [ ] **Remove Covered Intervals** (Medium)
+- [ ] **Employee Free Time** (Hard)
 - [ ] **My Calendar I** (Medium)
 - [ ] **My Calendar II** (Medium)
 
@@ -192,3 +193,4 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [ ] **Count Primes** (Medium)
 - [ ] **Ugly Number** (Easy)
 - [ ] **Rectangle Overlap** (Easy)
+- [ ] **GCD of Strings** (Easy)
