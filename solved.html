@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solved Questions (3)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #58a6ff;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 0.6rem;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      margin-bottom: 0.6rem;
+      overflow: hidden;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      gap: 1rem;
+    }
+
+    .q-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #e6edf3;
+    }
+
+    .toggle-btn {
+      flex-shrink: 0;
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.28rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+
+    .toggle-btn:hover { background: #58a6ff; color: #0d1117; }
+    .toggle-btn.open  { background: #388bfd22; border-color: #58a6ff; color: #58a6ff; }
+
+    .answer {
+      display: none;
+      padding: 0.9rem 1rem 1rem;
+      border-top: 1px solid #21262d;
+      background: #0d1117;
+    }
+
+    .answer.visible { display: block; }
+
+    .tip {
+      font-size: 0.875rem;
+      color: #c9d1d9;
+      background: #f0883e18;
+      border-left: 3px solid #f0883e;
+      border-radius: 3px;
+      padding: 0.45rem 0.7rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .tip-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #f0883e;
+      margin-right: 0.5rem;
+    }
+
+    pre {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 0.9rem 1rem;
+      overflow-x: auto;
+      font-size: 0.82rem;
+      line-height: 1.65;
+    }
+
+    code {
+      font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace;
+      color: #e6edf3;
+    }
+  </style>
+</head>
+<body>
+
+<h1>✅ Solved Questions &nbsp;<small style="font-size:0.85rem;color:#6e7681;">(3)</small></h1>
+
+
+  <div class="card">
+    <div class="card-header">
+      <span class="q-title">121. Best Time to Buy and Sell Stock</span>
+      <button class="toggle-btn" onclick="toggle(0)">Show Answer</button>
+    </div>
+    <div class="answer" id="ans-0">
+      
+        <div class="tip">
+          <span class="tip-label">Tip</span>
+          normal max profit calclualation
+        </div>
+      <pre><code>class Solution:
+    def maxProfit(self, prices: List[int]) -&gt; int:
+
+        profit = 0
+        MinPrice = prices[0]
+        for i in range(1, len(prices)):
+
+            if MinPrice&gt;=prices[i]:
+                MinPrice=prices[i]
+            else:
+                profit = max(profit, prices[i]-MinPrice)
+
+        return profit</code></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="q-title">122. Best Time to Buy and Sell Stock II</span>
+      <button class="toggle-btn" onclick="toggle(1)">Show Answer</button>
+    </div>
+    <div class="answer" id="ans-1">
+      
+      <pre><code>class Solution:
+    def maxProfit(self, prices: List[int]) -&gt; int:
+
+        profit = 0
+        n = len(prices)
+
+        for i in range(1, n):
+            if prices[i]&gt;prices[i-1]:
+                profit+=prices[i]-prices[i-1]
+        return profit</code></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="q-title">3. Longest Substring Without Repeating Characters</span>
+      <button class="toggle-btn" onclick="toggle(2)">Show Answer</button>
+    </div>
+    <div class="answer" id="ans-2">
+      
+        <div class="tip">
+          <span class="tip-label">Tip</span>
+          hashmap of string in inout and therir updated index
+        </div>
+      <pre><code>class Solution:
+    def lengthOfLongestSubstring(self, s: str) -&gt; int:
+        has = {}
+        start=0
+        max_len=0
+        
+        for i in range(len(s)):
+            if s[i] in has and has[s[i]] &gt;=start:
+                start = has[s[i]]+1
+            has[s[i]] = i
+            max_len = max(max_len, i-start+1)
+        return max_len        Use a separate solved.html — I can generate it from solved.md automatically every time you add a question (you rejected this, but it&#x27;s the only way to get a true button-on-same-line behavior)</code></pre>
+    </div>
+  </div>
+
+<script>
+  function toggle(idx) {
+    const ans = document.getElementById('ans-' + idx);
+    const btn = ans.previousElementSibling.querySelector('.toggle-btn');
+    const open = ans.classList.toggle('visible');
+    btn.textContent = open ? 'Hide Answer' : 'Show Answer';
+    btn.classList.toggle('open', open);
+  }
+</script>
+
+</body>
+</html>
