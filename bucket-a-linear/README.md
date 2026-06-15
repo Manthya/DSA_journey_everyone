@@ -65,7 +65,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 ## 🔸 Sliding Window
 
 **Must Solve:**
-- [ ] **Best Time to Buy and Sell Stock** (Easy) <details><summary>💡 Show Answer</summary>
+- [ ] <details><summary>**Best Time to Buy and Sell Stock** (Easy) &nbsp; 💡 Show Answer</summary>
 
   **Tip:** normal max profit calculation
 
