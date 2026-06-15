@@ -67,7 +67,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 **Must Solve:**
 
 <details>
-<summary>✅ Best Time to Buy and Sell Stock (Easy)</summary>
+<summary>✅ <b>Best Time to Buy and Sell Stock</b> (Easy)</summary>
 
 > **Tip:** normal max profit calculation
 
@@ -87,7 +87,7 @@ class Solution:
 </details>
 
 <details>
-<summary>✅ Longest Substring Without Repeating Characters (Medium)</summary>
+<summary>✅ <b>Longest Substring Without Repeating Characters</b> (Medium)</summary>
 
 > **Tip:** hashmap storing each character and its latest index; move start pointer past the duplicate
 
