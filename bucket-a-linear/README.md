@@ -68,7 +68,7 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 - [x] **Best Time to Buy and Sell Stock** (Easy)
 
   <details>
-  <summary>💡 Show Answer</summary>
+  <summary>💡</summary>
 
   > **Tip:** normal max profit calculation
 
