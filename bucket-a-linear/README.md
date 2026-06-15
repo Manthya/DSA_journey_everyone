@@ -66,7 +66,6 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 
 **Must Solve:**
 - [x] **Best Time to Buy and Sell Stock** (Easy)
-
   <details>
   <summary>💡</summary>
 
@@ -84,7 +83,6 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
                   profit = max(profit, prices[i] - MinPrice)
           return profit
   ```
-
   </details>
 - [ ] **Longest Substring Without Repeating Characters** (Medium)
 - [ ] **Longest Repeating Character Replacement** (Medium)
