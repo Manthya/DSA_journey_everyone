@@ -75,7 +75,17 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
             else:
                 profit = max(profit, prices[i] - MinPrice)
         return profit</pre></details>
-- [ ] **Longest Substring Without Repeating Characters** (Medium)
+- [x] **Longest Substring Without Repeating Characters** (Medium) <details><summary>💡</summary><blockquote><b>Tip:</b> hashmap storing each character and its latest index; move start pointer past the duplicate</blockquote><pre>class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        has = {}
+        start = 0
+        max_len = 0
+        for i in range(len(s)):
+            if s[i] in has and has[s[i]] >= start:
+                start = has[s[i]] + 1
+            has[s[i]] = i
+            max_len = max(max_len, i - start + 1)
+        return max_len</pre></details>
 - [ ] **Longest Repeating Character Replacement** (Medium)
 - [ ] **Minimum Window Substring** (Hard)
 - [ ] **Minimum Size Subarray Sum** (Medium)
