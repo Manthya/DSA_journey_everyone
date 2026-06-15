@@ -65,7 +65,27 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 ## 🔸 Sliding Window
 
 **Must Solve:**
-- [ ] **Best Time to Buy and Sell Stock** (Easy)
+- [ ] **Best Time to Buy and Sell Stock** (Easy) <details><summary>💡 Show Answer</summary>
+
+  **Tip:** normal max profit calculation
+
+  ```python
+  class Solution:
+      def maxProfit(self, prices: List[int]) -> int:
+
+          profit = 0
+          MinPrice = prices[0]
+          for i in range(1, len(prices)):
+
+              if MinPrice >= prices[i]:
+                  MinPrice = prices[i]
+              else:
+                  profit = max(profit, prices[i] - MinPrice)
+
+          return profit
+  ```
+
+  </details>
 - [ ] **Longest Substring Without Repeating Characters** (Medium)
 - [ ] **Longest Repeating Character Replacement** (Medium)
 - [ ] **Minimum Window Substring** (Hard)
