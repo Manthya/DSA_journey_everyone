@@ -65,40 +65,27 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 ## 🔸 Sliding Window
 
 **Must Solve:**
-- [x] **Best Time to Buy and Sell Stock** (Easy) <details><summary>💡</summary><blockquote><b>Tip:</b> normal max profit calculation</blockquote><pre>class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        profit = 0
-        MinPrice = prices[0]
-        for i in range(1, len(prices)):
-            if MinPrice >= prices[i]:
-                MinPrice = prices[i]
-            else:
-                profit = max(profit, prices[i] - MinPrice)
-        return profit</pre></details>
-- [x] **Longest Substring Without Repeating Characters** (Medium) <details><summary>💡</summary><blockquote><b>Tip:</b> hashmap storing each character and its latest index; move start pointer past the duplicate</blockquote><pre>class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        has = {}
-        start = 0
-        max_len = 0
-        for i in range(len(s)):
-            if s[i] in has and has[s[i]] >= start:
-                start = has[s[i]] + 1
-            has[s[i]] = i
-            max_len = max(max_len, i - start + 1)
-        return max_len</pre></details>
-- [ ] **Longest Repeating Character Replacement** (Medium)
-- [ ] **Minimum Window Substring** (Hard)
-- [ ] **Minimum Size Subarray Sum** (Medium)
+
+| | Question | Difficulty | Answer |
+|:---:|:---|:---:|:---:|
+| ✅ | **Best Time to Buy and Sell Stock** | Easy | <details><summary>💡</summary><blockquote><b>Tip:</b> normal max profit calculation</blockquote><pre>class Solution:<br>    def maxProfit(self, prices: List[int]) -> int:<br>        profit = 0<br>        MinPrice = prices[0]<br>        for i in range(1, len(prices)):<br>            if MinPrice >= prices[i]:<br>                MinPrice = prices[i]<br>            else:<br>                profit = max(profit, prices[i] - MinPrice)<br>        return profit</pre></details> |
+| ✅ | **Longest Substring Without Repeating Characters** | Medium | <details><summary>💡</summary><blockquote><b>Tip:</b> hashmap storing each character and its latest index; move start pointer past the duplicate</blockquote><pre>class Solution:<br>    def lengthOfLongestSubstring(self, s: str) -> int:<br>        has = {}<br>        start = 0<br>        max_len = 0<br>        for i in range(len(s)):<br>            if s[i] in has and has[s[i]] >= start:<br>                start = has[s[i]] + 1<br>            has[s[i]] = i<br>            max_len = max(max_len, i - start + 1)<br>        return max_len</pre></details> |
+| ⬜ | **Longest Repeating Character Replacement** | Medium | |
+| ⬜ | **Minimum Window Substring** | Hard | |
+| ⬜ | **Minimum Size Subarray Sum** | Medium | |
 
 **Good to Know (More Practice):**
-- [ ] **Permutation in String** (Medium)
-- [ ] **Sliding Window Maximum** (Hard)
-- [ ] **Find All Anagrams in a String** (Medium)
-- [ ] **Maximum Average Subarray I** (Easy)
-- [ ] **Subarrays with K Different Integers** (Hard)
-- [ ] **Max Consecutive Ones I & II & III** (Easy/Medium)
-- [ ] **Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold** (Medium)
-- [ ] **Frequency of the Most Frequent Element** (Medium)
+
+| | Question | Difficulty |
+|:---:|:---|:---:|
+| ⬜ | **Permutation in String** | Medium |
+| ⬜ | **Sliding Window Maximum** | Hard |
+| ⬜ | **Find All Anagrams in a String** | Medium |
+| ⬜ | **Maximum Average Subarray I** | Easy |
+| ⬜ | **Subarrays with K Different Integers** | Hard |
+| ⬜ | **Max Consecutive Ones I & II & III** | Easy/Medium |
+| ⬜ | **Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold** | Medium |
+| ⬜ | **Frequency of the Most Frequent Element** | Medium |
 
 ---
 
