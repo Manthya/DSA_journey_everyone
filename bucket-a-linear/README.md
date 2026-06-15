@@ -66,16 +66,8 @@ Problems are divided into **Must Solve** (core patterns every candidate should k
 
 **Must Solve:**
 
-| | Question | Difficulty |
-|:---:|:---|:---:|
-| ✅ | **Best Time to Buy and Sell Stock** | Easy |
-| ✅ | **Longest Substring Without Repeating Characters** | Medium |
-| ⬜ | **Longest Repeating Character Replacement** | Medium |
-| ⬜ | **Minimum Window Substring** | Hard |
-| ⬜ | **Minimum Size Subarray Sum** | Medium |
-
 <details>
-<summary>✅ Best Time to Buy and Sell Stock</summary>
+<summary>✅ Best Time to Buy and Sell Stock (Easy)</summary>
 
 > **Tip:** normal max profit calculation
 
@@ -95,7 +87,7 @@ class Solution:
 </details>
 
 <details>
-<summary>✅ Longest Substring Without Repeating Characters</summary>
+<summary>✅ Longest Substring Without Repeating Characters (Medium)</summary>
 
 > **Tip:** hashmap storing each character and its latest index; move start pointer past the duplicate
 
@@ -115,18 +107,20 @@ class Solution:
 
 </details>
 
+- [ ] **Longest Repeating Character Replacement** (Medium)
+- [ ] **Minimum Window Substring** (Hard)
+- [ ] **Minimum Size Subarray Sum** (Medium)
+
 **Good to Know (More Practice):**
 
-| | Question | Difficulty |
-|:---:|:---|:---:|
-| ⬜ | **Permutation in String** | Medium |
-| ⬜ | **Sliding Window Maximum** | Hard |
-| ⬜ | **Find All Anagrams in a String** | Medium |
-| ⬜ | **Maximum Average Subarray I** | Easy |
-| ⬜ | **Subarrays with K Different Integers** | Hard |
-| ⬜ | **Max Consecutive Ones I & II & III** | Easy/Medium |
-| ⬜ | **Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold** | Medium |
-| ⬜ | **Frequency of the Most Frequent Element** | Medium |
+- [ ] **Permutation in String** (Medium)
+- [ ] **Sliding Window Maximum** (Hard)
+- [ ] **Find All Anagrams in a String** (Medium)
+- [ ] **Maximum Average Subarray I** (Easy)
+- [ ] **Subarrays with K Different Integers** (Hard)
+- [ ] **Max Consecutive Ones I & II & III** (Easy/Medium)
+- [ ] **Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold** (Medium)
+- [ ] **Frequency of the Most Frequent Element** (Medium)
 
 ---
 
